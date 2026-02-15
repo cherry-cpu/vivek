@@ -8,30 +8,47 @@
         *{
             font-family: monospace;
         }
-        .navbar-left{
+        nav{
             display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        nav>div{
+            display: flex;
+            flex-direction: row;
+        }
+
+        nav>div.startingNav>p{
+            margin-right: 3.5vw;
             gap: 2vw;
             text-decoration: none;
         }
-        .navbar-left a{
+        nav>div>p>a{
             text-decoration: none;
             color: black;
-            font-size: larger;
+            font-size: 1.25em;
             font-weight: bold;
         }
-    </style>
 
+        nav>div.endingNav>p{
+            margin-left: 3.5vw;
+        }
+    </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="navbar-left">
-        <a href="home" class="home">Home</a>
-        <a href="doctors" class="doctors">Doctors</a>
-        <a href="book_Appointment" class="bookAppointment">Book Appointment</a>
-        <a href="profile" class="profile">Profile</a>
+    <nav>
+        <div class="startingNav">
+            <p><a href="home" class="home">Home</a></p>
+            <p><a href="doctors" class="doctors">Doctors</a></p>
+            <p><a href="book_Appointment" class="bookAppointment">Book Appointment</a></p>
+        </div>
+        <div class="endingNav">
+            <p><a href="profile" class="profile">Profile</a></p>
+            <p><a href="logout" class="logout">Logout</a></p>
         </div>
     </nav>
     {% block content %}
-    {% endblock %}    
+    {% endblock %}  
 </body>
 </html>

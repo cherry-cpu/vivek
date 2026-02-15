@@ -6,7 +6,10 @@
 <title>Login</title>
 
 <style>
-/* From Uiverse.io by SteveBloX */
+  *{
+    font-family: monospace;
+  }
+  /* From Uiverse.io by SteveBloX */
 .loginBtn {
   width: 150px;
   height: max-content;
@@ -60,18 +63,6 @@
   text-align: center;
 }
 
-.column div input {
-  border-radius: 15px;
-  border: 1px solid black;
-  padding: 10px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.formRow-3 {
-  display: flex;
-  justify-content: center;
-}
 
 /* Responsive tweaks */
 @media (max-width: 900px) {
@@ -107,11 +98,11 @@
 <form action="/login" method="post">
   
     <div class="formRow formRow-1">
-      <input type="text" placeholder="username" name="username">
+      <input type="text" placeholder="username" name="username" required>
     </div>
 
     <div class="formRow formRow-2">
-      <input type="password" placeholder="password" name="password">
+      <input type="password" placeholder="password" name="password" required>
     </div>
 
     <p style="text-align:center;">
